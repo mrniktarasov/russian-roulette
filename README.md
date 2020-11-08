@@ -17,13 +17,13 @@ npm run serve
 И перейти на  http://localhost:8080/
 ## Демонстрация
 ### Начало
-![Макет](https://github.com/mrniktarasov/russian-roulette/blob/master/public/screenshots/rr1.png)
+![Макет](https://github.com/mrniktarasov/russian-roulette/blob/master/screenshots/rr1.png)
 ### Заряд
-![Макет](https://github.com/mrniktarasov/russian-roulette/blob/master/public/screenshots/rr2.png)
+![Макет](https://github.com/mrniktarasov/russian-roulette/blob/master/screenshots/rr2.png)
 ### Неудачный исход
-![Макет](https://github.com/mrniktarasov/russian-roulette/blob/master/public/screenshots/rr3.png)
+![Макет](https://github.com/mrniktarasov/russian-roulette/blob/master/screenshots/rr3.png)
 ### Удачный исход
-![Макет](https://github.com/mrniktarasov/russian-roulette/blob/master/public/screenshots/rr4.png)
+![Макет](https://github.com/mrniktarasov/russian-roulette/blob/master/screenshots/rr4.png)
 ## Звуки взяты отсюда
 www.youtube.com/blinkfarm
 https://www.fesliyanstudios.com/
