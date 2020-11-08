@@ -2,20 +2,30 @@
     <div class="scene">
         <div class="carousel"
              v-bind:style="[rotateStyle.transform ? rotateStyle : '']">
-            <div class="carousel_cell"
-                v-for="(cell, index) in cells"
-                v-bind:key="index"
-            >{{cell}}</div>
+            <carousel_cell class="carousel_cell"
+                 v-for="(cell, index) in cells"
+                 v-bind:key="index"
+                 v-bind:cell = 'cell'
+                 v-bind:fired="fired"
+                 v-bind:bullet = 'cylinder[index]'
+            ></carousel_cell>
         </div>
     </div>
 </template>
 
 <script>
+    import carousel_cell from "@/components/carousel_cell";
+
     export default {
         name: "carousel",
         props: {
             cells: Array,
+            cylinder: Array,
             rotateStyle: Object,
+            fired: Boolean,
+        },
+        components: {
+            carousel_cell,
         }
     }
 </script>
@@ -52,12 +62,12 @@
         text-align: center;
     }
 
-    .carousel_cell:nth-child(6n+1) { background: hsla(  0, 100%, 50%, 0.8); }
-    .carousel_cell:nth-child(6n+2) { background: hsla( 30, 100%, 50%, 0.8); }
-    .carousel_cell:nth-child(6n+3) { background: hsla( 60, 100%, 50%, 0.8); }
-    .carousel_cell:nth-child(6n+4) { background: hsla( 90, 100%, 50%, 0.8); }
-    .carousel_cell:nth-child(6n+5) { background: hsla( 160, 100%, 50%, 0.8); }
-    .carousel_cell:nth-child(6n+0) { background: hsla( 200, 100%, 50%, 0.8); }
+    .carousel_cell:nth-child(6n+1) { background: hsla(62, 100%, 52%, 0.8); }
+    .carousel_cell:nth-child(6n+2) { background: hsla(62, 100%, 52%, 0.8); }
+    .carousel_cell:nth-child(6n+3) { background: hsla(62, 100%, 52%, 0.8); }
+    .carousel_cell:nth-child(6n+4) { background: hsla(62, 100%, 52%, 0.8); }
+    .carousel_cell:nth-child(6n+5) { background: hsla(62, 100%, 52%, 0.8); }
+    .carousel_cell:nth-child(6n+0) { background: hsla(62, 100%, 52%, 0.8); }
 
     .carousel_cell:nth-child(1) { transform: rotateY(  0deg) translateZ(199px); }
     .carousel_cell:nth-child(2) { transform: rotateY( 60deg) translateZ(199px); }
